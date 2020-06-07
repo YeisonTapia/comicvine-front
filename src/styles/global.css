@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f8fb;
+  font-family: 'Roboto', sans-serif;
+  color: #8c93bd;
+}
+
+.Header {
+  background-color: #fff;
+  border-bottom: 1px solid #e5eff5;
+}
+.Header-container {
+  display: grid;
+  justify-content: center;
+}
+.Header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 10px; /* gutter size */
+  background-clip: padding-box;
+}
+ 
+/* Style your items */
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 10px;
+}
+
+.ComicInfo-container {
+  grid-template-columns: minmax(auto, 1024px);
+  display: grid;
+  justify-content: center;
+}
+.ComicInfo-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.ComicInfo-avatar img {
+  width: 100%;
+  height: auto;
+  padding: 2em 0;
+}
+
+.ComicInfo-profile{
+  padding: 1em 0;
+  width: 100%;
+  height: auto;
+}
