@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import ComicCard from '../components/comic/ComicCard'
 import Masonry from 'react-masonry-css'
-import { BoxLoading } from 'react-loadingg'
+import { ThreeHorseLoading   } from 'react-loadingg'
 import comicvine from '../sevices/comicvine'
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     let offset = 0
     window.addEventListener('scroll', () => {
-      if(window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight ){
+      if(window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight){
         offset += 20
         getComics(offset)
       }
@@ -48,7 +48,9 @@ const Home = () => {
           <ComicCard comic={comic} key={`comic-${index}`}/>
         )}
       </Masonry>
-      { loading ? <BoxLoading color={'#8c93bd'} size={'small'}/> : '' }
+      <div>
+        { loading ? <ThreeHorseLoading   color={'#8c93bd'} size={'large'}/> : '' }
+      </div>
     </div>
   )
   
